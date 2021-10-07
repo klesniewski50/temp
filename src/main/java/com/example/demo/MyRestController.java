@@ -7,6 +7,10 @@ public class MyRestController {
 
     @GetMapping(value = "/{text}")
     public String findById(@PathVariable("text") String text) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(text);
+        builder.reverse();
+        System.out.println(builder.toString());
         return "index";
     }
 
